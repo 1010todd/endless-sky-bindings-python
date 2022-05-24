@@ -379,6 +379,9 @@ PYBIND11_MODULE(bindings, m) {
     // source/Mortgage
     // source/News
     // source/NPC
+	py::class_<NPC>(m, "NPC")
+        .def(py::init<>())
+        .def("Load", &Outfit::Load)
 
     // source/Outfit
     py::class_<Outfit>(m, "Outfit")
